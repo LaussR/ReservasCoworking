@@ -1,1 +1,68 @@
+# Reserva de Espacios de Coworking
+
+## Descripción del Proyecto
+Este proyecto es una aplicación web desarrollada en **Java con Servlets y JSP** para gestionar reservas en un espacio de coworking. Permite a los usuarios:
+- Registrar una reserva indicando su nombre, fecha, espacio y duración.
+- Ver una lista de reservas activas.
+- Eliminar reservas si es necesario.
+
+## Requisitos Previos
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+- **Java JDK 8 o superior**
+- **Apache Tomcat 9 o superior**
+- **NetBeans o Eclipse** (opcional, pero recomendado)
+- **MySQL y XAMPP** (si se usa base de datos, en este caso es opcional)
+
+## Instalación y Ejecución
+1. **Clonar o Descargar el Proyecto**
+   - Si está en GitHub:
+     ```bash
+     git clone https://github.com/LaussR/ReservasCoworking.git
+     ```
+   - O descargar el archivo ZIP y extraerlo.
+
+2. **Abrir el Proyecto en NetBeans**
+   - Ir a **File > Open Project** y seleccionar la carpeta del proyecto.
+   - Esperar a que carguen las dependencias.
+
+3. **Configurar el Servidor Tomcat**
+   - Ir a **Tools > Servers** en NetBeans.
+   - Agregar **Apache Tomcat 9+**.
+   - Configurar el puerto en `8080` si es necesario.
+
+4. **Ejecutar la Aplicación**
+   - Hacer clic derecho sobre el proyecto y seleccionar **Run**.
+   - O acceder manualmente en el navegador:
+     ```
+     http://localhost:8080/ReservasCoworking/index.html
+     ```
+
+## Funcionalidades
+- **Formulario de Reserva**: Permite a los usuarios registrar una reserva con los datos requeridos.
+- **Listado de Reservas**: Muestra todas las reservas activas en una tabla.
+- **Eliminación de Reservas**: Cada reserva tiene un botón para eliminarla.
+
+## Estructura del Proyecto
+```
+ReservasCoworking/
+│── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── model/               # Clases de modelo (Reserva.java)
+│   │   │   ├── servlets/            # Controladores (ReservaServlet.java, ListaReservasServlet.java, EliminarReservaServlet.java)
+│   │   ├── webapp/
+│   │       ├── index.html           # Formulario de reserva
+│   │       ├── listaReservas.jsp     # Listado de reservas
+│   ├── pom.xml                      # Configuración Maven
+│── README.md                         # Documentación
+```
+
+## Notas Finales
+- Proyecto desarrollado como parte de la evaluación de **Programación Web Backend**.
+- Autor: **Laura Sofia Rozo Velandia**.
+- Fecha de entrega: **14/03/2025**.
+
+---
+
+
 
