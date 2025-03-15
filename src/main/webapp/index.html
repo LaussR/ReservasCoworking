@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Espacios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .btn-secondary {
+            background-color: #007bff;
+        }
+        .btn-secondary:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+    <script>
+        function limpiarFormulario() {
+            document.getElementById("reservaForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Reserva tu espacio de coworking</h2>
+        <form id="reservaForm" action="ReservaServlet" method="post" onsubmit="setTimeout(limpiarFormulario, 100);">
+            <input type="text" name="nombre" placeholder="Nombre" required><br>
+            <input type="date" name="fecha" required><br>
+            <select name="espacio" required>
+                <option value="Escritorio">Escritorio</option>
+                <option value="Sala de reuniones">Sala de reuniones</option>
+                <option value="Oficina privada">Oficina privada</option>
+            </select><br>
+            <input type="number" name="duracion" placeholder="Duración (horas)" required><br>
+            <button type="submit">Reservar</button>
+        </form>
+        <br>
+        <a href="listaReservas.jsp"><button>Ver Reservas</button></a>
+        <br><br>
+        <a href="index.html"><button class="btn-secondary">Volver a Reservar</button></a>
+    </div>
+</body>
+</html>
